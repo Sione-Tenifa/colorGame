@@ -16,6 +16,7 @@ for(var i = 0; i < squares.length; i++){
     //grab color of clicked square
     var clickedColor = this.style.backgroundColor
     //comare color to pickedColor
+    console.log(clickedColor, pickedColor)
     if(clickedColor == pickedColor){
       messageDisplay.textContent = "Correct!"
       changeColors(clickedColor)
@@ -46,9 +47,21 @@ function gererateRandomColors(num){
   var arr = []
   //add num random colors to array
   for(var i = 0; i < num; i++){
+    arr.push(randomColor( ))
     //get random color push into arr
-    
+
   }
   // return array
   return arr 
+}
+
+function randomColor(){
+  //pick a red form 0 -255
+  var r = Math.floor(Math.random() * 256)
+  //pick a green from 0-255
+  var g = Math.floor(Math.random() * 256)
+  //pick a blue form 0-255
+  var b = Math.floor(Math.random() * 256)
+  "rgb( r, g, b"
+  return "rgb(" + r + ", " + g + ", " + b + ")";
 }
